@@ -1,7 +1,18 @@
-import java.time.LocalDate;
+package by.anton.hiber;
 
+import org.hibernate.mapping.Value;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.time.LocalDate;
+@Entity
+@Table(name = "mytest")
 public class Employee
 {
+
+    private long ID;
 
     private String name;
     private double salary;

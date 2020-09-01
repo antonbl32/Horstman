@@ -1,3 +1,9 @@
+package by.anton.hiber;
+
+import by.anton.hiber.Employee;
+import by.anton.hiber.First;
+import by.anton.hiber.Manager;
+
 import java.lang.reflect.Field;
 import java.text.NumberFormat;
 import java.time.LocalDate;
@@ -7,7 +13,7 @@ import static java.lang.Math.random;
 import static java.lang.System.*; // можно использовать не System.out а просто out
 
 /**
- * Данный метод <code>Main</code> является главным в программе
+ * Данный метод <code>by.anton.hiber.Main</code> является главным в программе
  * @author SH
  * @see <a href="http://web.oblgaz.com">Oblgaz</a>
  *

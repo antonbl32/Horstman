@@ -1,3 +1,7 @@
+package by.anton.hiber;
+
+import by.anton.hiber.Employee;
+
 public class Manager extends Employee
 {
     private double bonus;

@@ -1,3 +1,5 @@
+package by.anton.hiber;
+
 import java.util.Date;
 
 public class First {
