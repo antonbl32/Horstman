@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="postgres@localhost">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.18">
+    <root id="1">
+      <ServerVersion>12.3</ServerVersion>
+      <StartupTime>1597322745</StartupTime>
+    </root>
+    <database id="2" parent="1" name="mytest">
+      <ObjectId>16393</ObjectId>
+      <Owner>mytest</Owner>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>13318</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <Owner>postgres</Owner>
+      <Current>1</Current>
+    </database>
+  </database-model>
+</dataSource>
