@@ -1,7 +1,6 @@
 package by.anton.thread;
 
-import java.util.concurrent.Exchanger;
-import java.util.concurrent.ExecutorService;
+
 
 public class Test {
     private volatile String m="Первый";
@@ -25,22 +24,22 @@ public class Test {
           public void run(){
               for (int i = 0; i <100 ; i++) {
                   System.out.println("3 thread "+test.getM());
+                  test.setM("Третий");
               }
 
           }
         }.start();
     }
 
-}
-class MyThread2 implements Runnable {
-    String m;
+    static class MyThread2 implements Runnable {
+        String m;
 
-    public MyThread2(Test test){
-        this.m=test.getM();
-        test.setM("Второй");
-    }
-    @Override
-    public void run() {
+        public MyThread2(Test test){
+            this.m=test.getM();
+            test.setM("Второй");
+        }
+        @Override
+        public void run() {
             for (int i = 0; i < 100; i++) {
                 try {
                     Thread.sleep(1000);
@@ -52,24 +51,26 @@ class MyThread2 implements Runnable {
 
             }
 
-    }
-}
-class MyThread extends Thread{
-    String m;
-    public MyThread(Test test){
-        this.m=test.getM();
-        test.setM("Третий");
-    }
-    public void run(){
-        for (int i = 0; i <100 ; i++) {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.println("Hello first thread "+this.m);
         }
-
     }
+   static class MyThread extends Thread{
+        String m;
+        public MyThread(Test test){
+            this.m=test.getM();
+            test.setM("Первый");
+        }
+        public void run(){
+            for (int i = 0; i <100 ; i++) {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("Hello first thread "+this.m);
+            }
+
+        }
+    }
+
 }
 
