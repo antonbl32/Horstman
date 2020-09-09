@@ -7,6 +7,7 @@ import by.anton.hiber.Manager;
 import java.lang.reflect.Field;
 import java.text.NumberFormat;
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Random;
 import static java.lang.Math.random;
@@ -76,6 +77,15 @@ public class Main  {
         staff[0] = boss;
         staff[1] = new Employee("Harry Hacker", 50000,1989,10,1);
         staff[2] = new Employee("Tony Tester",40000,1990,3,15);
+        Class emp=boss.getClass();
+        out.println(emp.getName());
+        try {
+            Field field=emp.getField("bonus");
+            field.set(boss,6000);
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        }
+
         for (Employee e: staff
              ) {
             if (e instanceof Manager){
@@ -84,7 +94,13 @@ public class Main  {
             out.println(e.getName()+ " salary: " + e.getSalary());
         }
         out.println(staff[1].getSalary());
-
+        double[][] mass=new double[2][2];
+        for (int i = 0; i <mass.length ; i++) {
+            for (int j = 0; j <mass[i].length ; j++) {
+                mass[i][j]=i*2+j*3;
+            }
+        }
+        out.println(Arrays.deepToString(mass));
     }
 
 
