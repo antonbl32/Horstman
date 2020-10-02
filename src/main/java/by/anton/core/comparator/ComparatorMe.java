@@ -3,6 +3,7 @@ package by.anton.core.comparator;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class ComparatorMe {
     public static void main(String[] args) {
@@ -15,6 +16,6 @@ public class ComparatorMe {
         System.out.println();
         ArrayList<String> mass1=new ArrayList<String>(Arrays.asList(mass));
         Collections.sort(mass1);
-        System.out.println(mass1);
+
     }
 }
