@@ -14,6 +14,9 @@ public class StringToDate {
         DateFormat dateFormat1=new SimpleDateFormat("dd-MM-yyyy HH:mm");
         String dateToString=dateFormat1.format(date);
         System.out.println(dateToString);
+        Double m=2.1;
+        Double k=2.1;
+        System.out.println(m.equals(k));
 
     }
 }

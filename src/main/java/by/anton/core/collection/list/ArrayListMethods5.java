@@ -1,4 +1,4 @@
-package by.anton.core.collection;
+package by.anton.core.collection.list;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,7 +24,7 @@ public class ArrayListMethods5 {
         System.out.println(list3);
         Object[] array1=myList.toArray();
         String[] array2=myList.toArray(new String[0]); //при параметре 0 авторазмер массива
-        Arrays.stream(array2).forEach(System.out::println);
+        Arrays.stream(array2).forEach(System.out::print);
         List<Integer> list1= List.of(3,8,5,4,2,1,2,1,4,5,10);//unmodificable list
        // List<String> list2=List.copyOf(myList);//не модифицируемый лист не может содержать налл
 

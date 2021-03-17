@@ -1,4 +1,4 @@
-package by.anton.core.collection;
+package by.anton.core.collection.list;
 
 import java.util.ArrayList;
 import java.util.Iterator;

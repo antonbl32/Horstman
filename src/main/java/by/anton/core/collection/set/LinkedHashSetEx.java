@@ -1,0 +1,17 @@
+package by.anton.core.collection.map;
+
+import java.util.LinkedHashSet;
+
+public class LinkedHashSetEx {
+    public static void main(String[] args) {
+        LinkedHashSet<Integer> linkedHashSet=new LinkedHashSet<>();//запоминает последовательность добавления элементов
+        linkedHashSet.add(5);
+        linkedHashSet.add(3);
+        linkedHashSet.add(1);
+        linkedHashSet.add(8);
+        linkedHashSet.add(10);
+        System.out.println(linkedHashSet);
+        linkedHashSet.remove(8);
+        System.out.println(linkedHashSet.contains(10));
+    }
+}

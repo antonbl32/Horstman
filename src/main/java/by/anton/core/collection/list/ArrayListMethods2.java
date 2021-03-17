@@ -1,4 +1,4 @@
-package by.anton.core.collection;
+package by.anton.core.collection.list;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,9 +10,11 @@ public class ArrayListMethods2 {
     Students st2=new Students("Anton",'M',29,5,8.1);
     Students st3=new Students("Sasha",'W',24,2,8.7);
         List<Students> list = new ArrayList<>();
-        list.add(st1);
-        list.add(st2);
-        list.add(st3);
+//        list.add(st1);
+//        list.add(st2);
+//        list.add(st3);
+        list.addAll(List.of(st1,st2,st3));
+
         System.out.println(list);
         Students st4=new Students("Anton",'M',29,5,8.1);
 

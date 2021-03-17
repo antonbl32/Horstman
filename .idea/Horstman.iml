@@ -5,7 +5,7 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
-          <factory-entry name="ru.easyjava.data.jpa.hibernate" />
+          <factory-entry name="ru.easyjava.data.jpa.hibernate" value="9e6d1833-525a-4e1f-aa1a-aa5981a22e33" />
         </datasource-mapping>
         <naming-strategy-map />
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/META-INF/persistence.xml" />

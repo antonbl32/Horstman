@@ -1,4 +1,4 @@
-package by.anton.core.collection;
+package by.anton.core.collection.list;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -9,6 +9,9 @@ public class ListIteratorExample {
 
         String s="madam";
         List<Character> list=new LinkedList<>();
+        char[] mm=s.toCharArray();
+        char k='m';
+        System.out.println(Character.isMirrored(k)); // для символов '(' и ')' кот. откр и закр дает true
         for (char ch:s.toCharArray()){
             list.add(ch);
         }
