@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class DataRaceAnswer {
     static int counter=0;
 
-    public static void increment(){
+    public static synchronized void increment(){ //synchronized блокировка пока метод занят одним потоком
 
         counter++;
     }

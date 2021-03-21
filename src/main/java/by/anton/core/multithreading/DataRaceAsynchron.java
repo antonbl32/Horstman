@@ -17,7 +17,7 @@ class Counter{
 }
 
 class MyRunnableImpl implements Runnable{
-    public void increment(){
+    public void  increment(){ //для синхронизации можно добавить synchronize
         Counter.count++;
         System.out.print(Counter.count+" ");
     }
