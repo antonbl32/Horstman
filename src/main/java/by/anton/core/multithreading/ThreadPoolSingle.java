@@ -1,0 +1,31 @@
+package by.anton.core.multithreading;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+
+public class ThreadPoolSingle {
+
+    public static void main(String[] args) {
+        ExecutorService executorService= Executors.newSingleThreadExecutor();
+        for (int i = 0; i <10 ; i++) {
+            executorService.execute(new RunnableEmpl10());
+        }
+
+        executorService.shutdown();
+
+    }
+
+}
+class RunnableEmpl10 implements Runnable{
+    @Override
+    public void run() {
+        System.out.println(Thread.currentThread().getName()+" begins work");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println(Thread.currentThread().getName()+" ends work");
+    }
+}

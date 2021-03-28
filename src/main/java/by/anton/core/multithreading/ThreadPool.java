@@ -1,0 +1,36 @@
+package by.anton.core.multithreading;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+
+public class ThreadPool {
+
+    public static void main(String[] args) {
+        ExecutorService executorService= Executors.newFixedThreadPool(5);//используем фэктори метод
+        for (int i = 0; i <10 ; i++) {
+            executorService.execute(new RunnableEmpl100());
+        }
+
+        executorService.shutdown();
+        try {
+            executorService.awaitTermination(5, TimeUnit.SECONDS);//Заставляет ожидать поток в котором он вызывается
+            System.out.println("Main ends");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+}
+class RunnableEmpl100 implements Runnable{
+    @Override
+    public void run() {
+        System.out.println(Thread.currentThread().getName()+" begins work");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println(Thread.currentThread().getName()+" ends work");
+    }
+}
