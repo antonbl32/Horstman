@@ -27,8 +27,8 @@ public class ThreadPoolScheduled {
         scheduledExecutorService.shutdown();
 
         ExecutorService executorService=Executors.newCachedThreadPool();
-        //Кэшированный тред пул созадет количество потоков в зависимости от нагрузки, по
-        //надобности
+        //Кэшированный тред пул создает количество потоков в зависимости от нагрузки, по
+        //надобности, если через 60 сек после использования последней задачи поток удаляется
 
 
     }
